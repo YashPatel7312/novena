@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../page style/DoctorsSingle.css";
 const DoctorsSingle = () => {
   return (
     <div className="page">
