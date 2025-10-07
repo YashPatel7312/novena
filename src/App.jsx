@@ -27,9 +27,9 @@ import ContactPage from "./pages/ContactPage";
 function App() {
   return (
     <Router>
-      <BottomNav /> {/* ✅ Top navigation bar */} 
-      <Navbar /> {/* ✅ Main navigation bar */}
-
+     
+      <Nav /> {/* ✅ Main navigation bar */}
+       <BottomNav /> {/* ✅ Top navigation bar */} 
       <div className="container my-4">
         <Routes>
           <Route path="/" element={<HomePage />} />
