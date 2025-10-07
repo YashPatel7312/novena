@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components
 import Nav from "./components/TopNavbar";
-import Navbar from "./components/Navbar";
+import BottomNav from "./components/bottomnav";
 import Footer from "./components/Footer";
 
 // Bootstrap
@@ -27,7 +27,7 @@ import ContactPage from "./pages/ContactPage";
 function App() {
   return (
     <Router>
-      <Nav /> {/* ✅ Top black info bar */}
+      <BottomNav /> {/* ✅ Top navigation bar */} 
       <Navbar /> {/* ✅ Main navigation bar */}
 
       <div className="container my-4">
