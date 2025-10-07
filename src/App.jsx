@@ -3,9 +3,9 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components
-import Nav from "./components/TopNavbar";
-import BottomNav from "./components/bottomnav";
-import Footer from "./components/Footer";
+import Nav from "./components/TopNavbar";       // TopNavbar.jsx
+import BottomNav from "./components/bottomnav"; // bottomnav.jsx
+import Footer from "./components/Footer";       // Footer.jsx
 
 // Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -18,7 +18,7 @@ import Services from "./pages/Services";
 import Department from "./pages/Department";
 import DepartmentSingle from "./pages/DepartmentSingle";
 import Doctors from "./pages/Doctors";
-import DoctorsSingle from "./pages/DoctorSingle";
+import DoctorsSingle from "./pages/DoctorSingle"; // matches DoctorSingle.jsx
 import Appoinment from "./pages/Appoinment";
 import BlogWithSidebar from "./pages/BlogWithSidebar";
 import BlogSingle from "./pages/BlogSingle";
@@ -27,9 +27,13 @@ import ContactPage from "./pages/ContactPage";
 function App() {
   return (
     <Router>
-     
-      <Nav /> {/* ✅ Main navigation bar */}
-       <BottomNav /> {/* ✅ Top navigation bar */} 
+      {/* Top Navbar */}
+      <Nav />
+
+      {/* Optional Bottom Navigation */}
+      <BottomNav />
+
+      {/* Main Content */}
       <div className="container my-4">
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -46,6 +50,7 @@ function App() {
         </Routes>
       </div>
 
+      {/* Footer */}
       <Footer />
     </Router>
   );
