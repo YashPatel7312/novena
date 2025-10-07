@@ -17,13 +17,9 @@ import AboutPage from "./pages/AboutPage";
 import Services from "./pages/Services";
 import Department from "./pages/Department";
 import DepartmentSingle from "./pages/DepartmentSingle";
-import Submenu01 from "./pages/Submenu01";
-import Submenu02 from "./pages/Submenu02";
 import Doctors from "./pages/Doctors";
-// import DoctorsSingle from "./pages/DoctorsSingle";
+import DoctorsSingle from "./pages/DoctorSingle";
 import Appoinment from "./pages/Appoinment";
-import Submenu1 from "./pages/Submenu1";
-import Submenu2 from "./pages/Submenu2";
 import BlogWithSidebar from "./pages/BlogWithSidebar";
 import BlogSingle from "./pages/BlogSingle";
 import ContactPage from "./pages/ContactPage";
@@ -41,13 +37,9 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/department" element={<Department />} />
           <Route path="/department-single" element={<DepartmentSingle />} />
-          <Route path="/submenu01" element={<Submenu01 />} />
-          <Route path="/submenu02" element={<Submenu02 />} />
           <Route path="/doctors" element={<Doctors />} />
-          {/* <Route path="/doctor-single" element={<DoctorsSingle />} /> */}
+          <Route path="/doctor-single" element={<DoctorsSingle />} />
           <Route path="/appoinment" element={<Appoinment />} />
-          <Route path="/submenu1" element={<Submenu1 />} />
-          <Route path="/submenu2" element={<Submenu2 />} />
           <Route path="/blog-with-sidebar" element={<BlogWithSidebar />} />
           <Route path="/blog-single" element={<BlogSingle />} />
           <Route path="/contact" element={<ContactPage />} />
