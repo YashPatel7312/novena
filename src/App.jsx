@@ -19,10 +19,11 @@ import Department from "./pages/Department";
 import DepartmentSingle from "./pages/DepartmentSingle";
 import Doctors from "./pages/Doctors";
 import DoctorsSingle from "./pages/DoctorSingle"; // matches DoctorSingle.jsx
-import Appoinment from "./pages/Appoinment";
+import AppointmentPage from "./pages/AppoinmentPage";
 import BlogWithSidebar from "./pages/BlogWithSidebar";
 import BlogSingle from "./pages/BlogSingle";
 import ContactPage from "./pages/ContactPage";
+
 
 function App() {
   return (
@@ -34,7 +35,6 @@ function App() {
       <BottomNav />
 
       {/* Main Content */}
-      <div className="container my-4">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
@@ -43,12 +43,11 @@ function App() {
           <Route path="/department-single" element={<DepartmentSingle />} />
           <Route path="/doctors" element={<Doctors />} />
           <Route path="/doctor-single" element={<DoctorsSingle />} />
-          <Route path="/appoinment" element={<Appoinment />} />
+          <Route path="/appointment" element={<AppointmentPage />} />
           <Route path="/blog-with-sidebar" element={<BlogWithSidebar />} />
           <Route path="/blog-single" element={<BlogSingle />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
-      </div>
 
       {/* Footer */}
       <Footer />

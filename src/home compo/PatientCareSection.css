@@ -1,0 +1,55 @@
+.patient-care-section {
+  background-color: #f4f9fd;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #1c2b5a;
+}
+
+.title-underline {
+  width: 50px;
+  height: 4px;
+  background-color: #e91e63;
+  border-radius: 10px;
+}
+
+.section-subtitle {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon i {
+  font-size: 2rem;
+  color: #e91e63;
+  flex-shrink: 0;
+}
+
+.service-card h5 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  color: #6c757d;
+  line-height: 1.4;
+  margin-bottom: 0;
+}

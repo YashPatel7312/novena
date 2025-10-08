@@ -1,0 +1,39 @@
+.pc-counter-section {
+  background-color: #133a6f; /* dark blue */
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.pc-counter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.pc-counter-box h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.pc-counter-box p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .pc-counter-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pc-counter-container {
+    grid-template-columns: 1fr;
+  }
+}

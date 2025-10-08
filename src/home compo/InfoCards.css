@@ -1,0 +1,78 @@
+/* ===============================
+   Info Cards Section
+=============================== */
+.info-section {
+  background-color: #f4f9fc;
+  padding: 60px 0;
+  margin-top: -80px; /* 👈 lift cards up into hero area if desired */
+  position: relative;
+  z-index: 5;
+}
+
+.info-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  padding: 35px 25px;
+  text-align: left;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-icon {
+  font-size: 32px;
+  color: #0d2d62;
+  margin-bottom: 15px;
+}
+
+.info-card h4 {
+  color: #223a66;
+  font-family: exo, sans-serif;
+}
+
+.info-card p {
+  color: #6c757d;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.info-card .btn {
+  background-color: #0d2d62;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.info-card .btn:hover {
+  background-color: #0b2451;
+}
+
+/* Working hours list */
+.working-hours li {
+  display: flex;
+  justify-content: space-between;
+  color: #6c757d;
+  font-size: 15px;
+  padding-bottom: 5px;
+  margin-bottom: 7px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+@media (max-width: 767px) {
+  .info-section {
+    margin-top: 0;
+    padding: 40px 0;
+  }
+
+  .info-card {
+    text-align: center;
+  }
+
+  .working-hours li {
+    justify-content: center;
+    gap: 10px;
+  }
+}

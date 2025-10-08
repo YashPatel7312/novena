@@ -1,0 +1,150 @@
+/* ============================
+   Appointment Section - Main
+===============================*/
+.appointment-section {
+  background-color: #fff;
+  padding: 80px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ============================
+   Left Image
+===============================*/
+.appointment-image img {
+  width: 460px;
+  height: 665px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.appointment-phone {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #1c2b5a;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.appointment-phone i {
+  font-size: 1.3rem;
+  margin-right: 8px;
+}
+
+/* ============================
+   Form - Title & Subtitle
+===============================*/
+.form-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1c2b5a;
+  margin-bottom: 10px;
+}
+
+.form-subtitle {
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* ============================
+   Form - Inputs & Selects
+===============================*/
+.appointment-form .form-control,
+.appointment-form .form-select {
+  background-color: #f8fbfd;
+  border: 1px solid #e5e8eb;
+  padding: 12px;
+  font-size: 0.95rem;
+  color: #333;
+  border-radius: 4px;
+}
+
+.appointment-form .form-control:focus,
+.appointment-form .form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: none;
+  background-color: #fff;
+}
+
+/* Date & Time pickers fix (remove extra padding) */
+.appointment-form input[type="date"],
+.appointment-form input[type="time"] {
+  padding-right: 8px;
+}
+
+/* ============================
+   Textarea
+===============================*/
+.appointment-form textarea {
+  resize: none;
+}
+
+/* ============================
+   Button - MAKE APPOINTMENT
+===============================*/
+.appointment-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c2b5a; /* dark blue */
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px; /* pill shape */
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+}
+
+.appointment-btn i {
+  font-size: 1rem;
+  margin-left: 6px;
+}
+
+.appointment-btn:hover {
+  background-color: #0d1d44;
+  transform: translateY(-1px);
+}
+
+/* ============================
+   Responsive
+===============================*/
+@media (max-width: 991.98px) {
+  .appointment-image img {
+    height: 350px;
+  }
+
+  .form-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .appointment-section {
+    padding: 60px 0;
+  }
+
+  .appointment-image img {
+    height: 280px;
+  }
+
+  .appointment-phone {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  .appointment-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

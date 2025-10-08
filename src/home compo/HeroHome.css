@@ -1,0 +1,140 @@
+/* ================================
+  HOME HERO SECTION STYLE
+=================================== */
+
+.hero-section {
+  background-color: #f4f9fc;
+  background: url("../assets/homehero.jpg") no-repeat center center;
+  background-size: contain;       /* ✅ Show full image without crop */
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-size: 100% 100%;
+}
+
+.hero-section .letter-space {
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #6f88a6;
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding-top: 15px;  /* creates space for line above */
+}
+
+.hero-section .letter-space::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 7%;
+  transform: translateX(-50%);
+  width: 40px;               /* length of pink line */
+  height: 4px;               /* thickness of line */
+  background-color: #e43f5a; /* pink */
+}
+
+
+.hero-section h1 {
+  color: #223a66 !important;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 60px;
+  font-family: exo, sans-serif;
+}
+
+.hero-section p {
+  max-width: 500px;
+  color: #6c757d;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.hero-section .btn {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 24px;
+}
+
+.hero-section .btn-danger {
+  background-color: #e43f5a;
+  border: none;
+}
+
+.hero-section .btn-danger:hover {
+  background-color: #cf374f;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+=================================== */
+
+@media (max-width: 991px) {
+  .hero-section {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    margin: 0 auto 1.5rem;
+  }
+
+  .hero-section .btn {
+    margin-top: 10px;
+  }
+
+  .hero-section .col-lg-6 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ================================
+   Responsive — Hide background on tablets & mobile
+=================================== */
+
+/* Tablet & below (<= 991px) */
+@media (max-width: 991px) {
+  .hero-section {
+    background: none !important;       /* ❌ remove image */
+    background-color: #f4f9fc !important; /* ✅ keep background color */
+    min-height: auto;                  /* adjust height automatically */
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+/* Mobile (<= 575px) */
+@media (max-width: 575px) {
+  .hero-section {
+    background: none !important;
+    background-color: #f4f9fc !important;
+    min-height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-section {
+    text-align: left;
+  }
+}
+
