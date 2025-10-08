@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import "../home compo/CounterPc.css";
+import "../homecompo/CounterPc.css";
 
 const useInView = (options) => {
   const ref = useRef();

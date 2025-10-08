@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./AppointmentSection.css";
+import "../homecompo/AppointmentSection.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import formimg from '../assets/formimg.jpg';
 

@@ -1,10 +1,10 @@
 import React from "react";
-import HeroHome from "../home compo/HeroHome";
-import InfoCards from "../home compo/InfoCards";
-import HomePc from "../home compo/HomePc";
-import CounterPc from "../home compo/CounterPc";
-import PatientCareSection from "../home compo/PatientCareSection";
-import AppointmentSection from "../home compo/AppointmentSection";
+import HeroHome from "../homecompo/HeroHome";
+import InfoCards from "../homecompo/InfoCards";
+import HomePc from "../homecompo/HomePc";
+import CounterPc from "../homecompo/CounterPc";
+import PatientCareSection from "../homecompo/PatientCareSection";
+import AppointmentSection from "../homecompo/AppointmentSection";
 
 const HomePage = () => {
   return (

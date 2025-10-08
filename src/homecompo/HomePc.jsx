@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";  // ✅ Import Link for navigation
-import "../home compo/HomePc.css"; // Ensure the path is correct
+import "../homecompo/HomePc.css"; // Ensure the path is correct
 import img1 from "../assets/img1.jpg";
 import img2 from "../assets/img2.jpg";
 import img3 from "../assets/img3.jpg";

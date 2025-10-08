@@ -1,5 +1,5 @@
 import React from "react";
-import "./PatientCareSection.css";
+import "../homecompo/PatientCareSection.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 

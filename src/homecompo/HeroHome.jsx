@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../home compo/HeroHome.css"; // Ensure the path is correct
+import "../homecompo/HeroHome.css"; // Ensure the path is correct
 
 const HeroSection = () => {
   return (
