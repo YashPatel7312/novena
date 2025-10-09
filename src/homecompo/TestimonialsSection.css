@@ -14,17 +14,17 @@
   height: 4px;
   background-color: #e91e63;
   border-radius: 10px;
+  margin: 0 auto;
 }
 
 .section-subtitle {
   max-width: 700px;
-  margin-bottom: 16px;
+  margin: 0 auto 16px auto;
   font-size: 16px;
   line-height: 1.6;
   color: #6f8ba4;
 }
 
-/* Testimonial Card */
 .testimonial-card {
   background-color: #fff;
   border-radius: 8px;
@@ -33,12 +33,16 @@
   position: relative;
   min-height: 180px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  margin-bottom: 40px; /* 👈 Card અને dots વચ્ચે space */
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .testimonial-header {
   display: flex;
   align-items: center;
+  margin-bottom: 12px;
 }
 
 .testimonial-img {
@@ -47,6 +51,20 @@
   object-fit: cover;
   border-radius: 50%;
   flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.testimonial-header h6 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 700;
+  color: #223a66;
+}
+
+.testimonial-header small {
+  display: block;
+  font-size: 0.85rem;
+  color: #6f8ba4;
 }
 
 .testimonial-text {
@@ -62,22 +80,76 @@
   right: 15px;
   font-size: 2rem;
   color: #f4b6c2;
+  opacity: 0.7;
 }
 
-/* Swiper pagination dots */
-.swiper-pagination {
+.testimonials-swiper .swiper-pagination {
   position: relative;
-  margin-top: 20px; /* 👈 dots ને card થી નીચે લાવ્યું */
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.swiper-pagination-bullet {
+.testimonials-swiper .swiper-pagination-bullet {
   background: #1c2b5a;
   opacity: 0.4;
-  transition: 0.3s;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
-.swiper-pagination-bullet-active {
+.testimonials-swiper .swiper-pagination-bullet-active {
   background: #1c2b5a;
   opacity: 1;
-  transform: scale(1.1);
+  transform: scale(1.2);
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 36px;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  .testimonial-img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 32px;
+  }
+  .testimonial-card {
+    padding: 18px;
+  }
+  .testimonial-img {
+    width: 45px;
+    height: 45px;
+  }
+  .testimonial-header h6 {
+    font-size: 0.95rem;
+  }
+  .testimonial-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 28px;
+  }
+  .testimonial-card {
+    margin-bottom: 30px;
+  }
+  .testimonials-swiper .swiper-pagination {
+    margin-top: 15px;
+  }
 }

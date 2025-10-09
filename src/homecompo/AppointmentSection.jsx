@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../homecompo/AppointmentSection.css";
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import formimg from '../assets/formimg.jpg';
+import "bootstrap-icons/font/bootstrap-icons.css";
+import formimg from "../assets/formimg.jpg";
 
 const AppointmentSection = () => {
   const [formData, setFormData] = useState({
@@ -26,14 +26,10 @@ const AppointmentSection = () => {
           {/* Left Image */}
           <div className="col-lg-6">
             <div className="appointment-image position-relative">
-              <img
-                src={formimg}
-                alt="Doctors"
-                className="img-fluid"
-              />
-              <div className="appointment-phone d-flex align-items-center">
-                <i className="bi bi-telephone-outbound me-2"></i>
-                <span className="fw-bold fs-5">+23 345 67980</span>
+              <img src={formimg} alt="Doctors" className="img-fluid" />
+              <div className="appointment-phone">
+                <i className="bi bi-telephone-outbound"></i>
+                <span>+23 345 67980</span>
               </div>
             </div>
           </div>
@@ -42,8 +38,8 @@ const AppointmentSection = () => {
           <div className="col-lg-6">
             <h2 className="form-title">Book appointment</h2>
             <p className="form-subtitle">
-              Mollitia dicta commodi est recusandae iste, natus eum asperiores corrupti qui velit.
-              Iste dolorum atque similique praesentium soluta.
+              Mollitia dicta commodi est recusandae iste, natus eum asperiores
+              corrupti qui velit. Iste dolorum atque similique praesentium soluta.
             </p>
 
             <form className="appointment-form">

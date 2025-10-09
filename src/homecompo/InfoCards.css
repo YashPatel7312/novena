@@ -2,9 +2,8 @@
    Info Cards Section
 =============================== */
 .info-section {
-  background-color: #f4f9fc;
   padding: 60px 0;
-  margin-top: -80px; /* 👈 lift cards up into hero area if desired */
+  margin-top: -130px; /* 👈 lift cards up into hero area if desired */
   position: relative;
   z-index: 5;
 }

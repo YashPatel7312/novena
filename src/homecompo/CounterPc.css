@@ -1,39 +1,62 @@
+/* 🌐 Counter Section with Background Image */
 .pc-counter-section {
-  background-color: #133a6f; /* dark blue */
-  padding: 60px 20px;
-  color: #fff;
-  text-align: center;
+  background: url("../assets/conter.jpg") no-repeat center center/cover; /* 🖼 તમારી image path અહીં */
+  position: relative;
+  width: 100%;
 }
 
+/* 🌑 Overlay Color on Background */
+.pc-counter-overlay {
+  background-color: rgba(19, 58, 111, 0.92); /* dark blue with opacity */
+  padding: 60px 20px;
+  width: 100%;
+}
+
+/* 🧭 Container Layout */
 .pc-counter-container {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  text-align: center;
+  color: #fff;
 }
 
+/* 🔢 Counter Numbers */
 .pc-counter-box h2 {
-  font-size: 2.5rem;
+  font-size: 70px;
   font-weight: 700;
   margin-bottom: 8px;
+  font-family: "Exo", sans-serif;
 }
 
+/* 📝 Counter Titles */
 .pc-counter-box p {
   font-size: 1rem;
   opacity: 0.9;
+  font-family: "Roboto", sans-serif;
 }
 
-/* Responsive */
+/* 💻 Tablet Responsive (2 Columns) */
 @media (max-width: 992px) {
   .pc-counter-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+
+  .pc-counter-box h2 {
+    font-size: 50px;
+  }
 }
 
+/* 📱 Mobile Responsive (1 Column) */
 @media (max-width: 576px) {
   .pc-counter-container {
     grid-template-columns: 1fr;
+  }
+
+  .pc-counter-box h2 {
+    font-size: 40px;
   }
 }

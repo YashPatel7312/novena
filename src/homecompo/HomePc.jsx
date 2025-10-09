@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";  // ✅ Import Link for navigation
-import "../homecompo/HomePc.css"; // Ensure the path is correct
+import { Link } from "react-router-dom";
+import "../homecompo/HomePc.css";
 import img1 from "../assets/img1.jpg";
 import img2 from "../assets/img2.jpg";
 import img3 from "../assets/img3.jpg";
@@ -27,7 +27,6 @@ const HomePc = () => {
           deleniti ipsum officia dolores repellat laudantium obcaecati neque.
         </p>
 
-        {/* ✅ Navigate to /services when button is clicked */}
         <Link to="/services" className="pc-btn">
           SERVICES <span>&#8250;</span>
         </Link>

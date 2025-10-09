@@ -17,6 +17,10 @@
   background-size: 100% 100%;
 }
 
+.hero-section .container {
+  text-align: left;
+}
+
 .hero-section .letter-space {
   letter-spacing: 1.5px;
   text-transform: uppercase;

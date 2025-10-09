@@ -1,10 +1,13 @@
 .patient-care-section {
   background-color: #f4f9fd;
+  padding-top: 200px;
+  margin: 0px auto;
 }
 
 .section-title {
   font-size: 2rem;
   color: #1c2b5a;
+  margin-bottom: 16px;
 }
 
 .title-underline {

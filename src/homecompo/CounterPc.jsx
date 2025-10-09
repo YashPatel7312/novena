@@ -53,19 +53,23 @@ const CounterPc = () => {
   ];
 
   return (
+    <div className="container">
     <section className="pc-counter-section" ref={ref}>
-      <div className="pc-counter-container">
-        {counters.map((item, index) => (
-          <div className="pc-counter-box" key={index}>
-            <h2>
-              {inView ? <SimpleCounter end={item.number} /> : 0}
-              {item.suffix}
-            </h2>
-            <p>{item.title}</p>
-          </div>
-        ))}
+      <div className="pc-counter-overlay">
+        <div className="container pc-counter-container">
+          {counters.map((item, index) => (
+            <div className="pc-counter-box" key={index}>
+              <h2>
+                {inView ? <SimpleCounter end={item.number} /> : 0}
+                {item.suffix}
+              </h2>
+              <p>{item.title}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
+    </div>
   );
 };
 

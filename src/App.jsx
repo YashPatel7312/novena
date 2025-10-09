@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./components/TopNavbar";       // TopNavbar.jsx
 import BottomNav from "./components/bottomnav"; // bottomnav.jsx
 import Footer from "./components/Footer";       // Footer.jsx
+import ScrollToTop from "./components/ScrollToTop"; // ScrollToTop.jsx
 
 // Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -48,7 +49,7 @@ function App() {
           <Route path="/blog-single" element={<BlogSingle />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
-
+      <ScrollToTop />
       {/* Footer */}
       <Footer />
     </Router>
