@@ -6,7 +6,6 @@ import Logo from "../assets/logo.png";
 import "../componets styles/bottomnav.css";
 
 const BottomNav = () => {
-  // Close mobile menu when link clicked
   const handleNavLinkClick = () => {
     const navbarCollapse = document.getElementById("mainNavbar");
     if (navbarCollapse.classList.contains("show")) {
@@ -17,13 +16,13 @@ const BottomNav = () => {
 
   return (
     <nav className="navbar navbar-expand-lg">
-      <div className="container-fluid">
+      <div className="navbar-inner">
         {/* Logo */}
         <Link className="navbar-brand" to="/">
           <img src={Logo} width="212" height="60" alt="Logo" />
         </Link>
 
-        {/* Toggle Button (Mobile) */}
+        {/* Toggle Button */}
         <button
           className="navbar-toggler"
           type="button"

@@ -1,13 +1,23 @@
-/* Navbar container */
+/* ✅ Navbar wrapper - full width */
 .navbar {
+  width: 100%;
+  background-color: #fff;
   padding: 12px 0px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+}
+
+/* ✅ Inner container — controls left/right spacing */
+.navbar-inner {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1180px;
-  margin: 0px auto;
-  flex-wrap: wrap; /* allow wrapping on mobile */
-  background-color: #fff; /* navbar background */
+  flex-wrap: wrap;
 }
 
 /* Brand / Logo text */
@@ -58,7 +68,7 @@
   border-bottom: none;
   border-left: none;
   border-right: none;
-  background-color: #fff; /* match main navbar */
+  background-color: #fff;
 }
 
 /* Submenu links */
@@ -80,7 +90,6 @@
   background-color: transparent !important;
 }
 
-
 .navbar-nav .nav-link.active-link,
 .navbar-nav .nav-link.active-link:hover {
   color: #e12454 !important;
@@ -91,11 +100,23 @@
   color: #e12454 !important;
 }
 
-
 /* Desktop: hover effect for submenus */
 @media (min-width: 992px) {
   .dropdown-submenu:hover > .dropdown-menu {
     display: block;
+  }
+
+  .navbar .dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+
+  .navbar .dropdown-toggle::after {
+    transition: transform 0.3s ease;
+  }
+
+  .navbar .dropdown:hover .dropdown-toggle::after {
+    transform: rotate(180deg);
   }
 }
 
@@ -118,12 +139,12 @@
     width: 100%;
     text-align: center;
   }
+
   .nav-link {
     padding: 15px;
     margin-right: 0px;
   }
 
-  /* Submenu full width */
   .dropdown-submenu > .dropdown-menu {
     position: relative;
     left: 0;
@@ -132,24 +153,7 @@
     width: 100%;
   }
 
-  /* Toggle icon alignment */
   .navbar-toggler {
     margin-left: auto;
-  }
-}
-
-/* Desktop Hover Dropdown */
-@media (min-width: 992px) {
-  .navbar .dropdown:hover > .dropdown-menu {
-    display: block;
-    margin-top: 0; /* dropdown નીચે smoothly open થાય */
-  }
-
-  .navbar .dropdown-toggle::after {
-    transition: transform 0.3s ease;
-  }
-
-  .navbar .dropdown:hover .dropdown-toggle::after {
-    transform: rotate(180deg);
   }
 }
