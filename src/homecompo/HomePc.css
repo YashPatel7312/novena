@@ -1,13 +1,25 @@
-/* ✅ Base - Desktop & Tablet (same layout) */
+/* ========= Outer Section (full width) ========= */
 .pc-section {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #ffffff; /* Optional */
+}
+
+/* ========= Inner Container (centered on desktop) ========= */
+.pc-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 0;
   gap: 40px;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
+/* ========= Images ========= */
 .pc-images {
   display: flex;
   gap: 20px;
@@ -18,6 +30,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  flex: 1;
 }
 
 .pc-img {
@@ -25,6 +38,7 @@
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
 .pc-left .top-img {
@@ -35,11 +49,15 @@
   height: 220px;
 }
 
-.pc-right .main-img {
-  height: 400px;
-  margin-top: 30px;
+.pc-right {
+  flex: 1;
 }
 
+.pc-right .main-img {
+  height: 460px;
+}
+
+/* ========= Content ========= */
 .pc-content {
   flex: 1 1 40%;
 }
@@ -57,6 +75,7 @@
   color: #555;
   line-height: 1.6;
   margin-bottom: 30px;
+  max-width: 420px;
 }
 
 .pc-btn {
@@ -78,9 +97,21 @@
   transform: translateY(-2px);
 }
 
-/* ✅ Mobile Only - Column layout */
+/* ========= Responsive ========= */
+
+/* Tablet adjustments */
+@media (max-width: 991.98px) {
+  .pc-content h1 {
+    font-size: 2rem;
+  }
+  .pc-right .main-img {
+    height: 400px;
+  }
+}
+
+/* Mobile Layout */
 @media (max-width: 767.98px) {
-  .pc-section {
+  .pc-container {
     flex-direction: column;
     text-align: left;
   }
@@ -88,14 +119,21 @@
   .pc-images {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
+  .pc-left .top-img,
+  .pc-left .bottom-img,
   .pc-right .main-img {
     height: auto;
   }
 
-  .pc-left .top-img,
-  .pc-left .bottom-img {
-    height: auto;
+  .pc-content {
+    width: 100%;
+    text-align: left;
+  }
+
+  .pc-content h1 {
+    font-size: 1.8rem;
   }
 }
