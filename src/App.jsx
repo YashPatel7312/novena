@@ -47,11 +47,11 @@ function App() {
           <Route path="/appointment" element={<AppointmentPage />} />
           <Route path="/blog-with-sidebar" element={<BlogWithSidebar />} />
           <Route path="/blog-single" element={<BlogSingle />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/contact" element={<ContactPage />} /> 
         </Routes>
       <ScrollToTop />
       {/* Footer */}
-      <Footer />
+     <Footer />
     </Router>
   );
 }
