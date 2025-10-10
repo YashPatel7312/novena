@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "../componets styles/ScrollToTop.css"; // 👈 CSS file below
+import "../componets styles/ScrollToTop.css";
 
 const ScrollToTop = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > window.innerHeight) {
+      if (window.scrollY > 300) {   // 👈 fixed condition
         setVisible(true);
       } else {
         setVisible(false);

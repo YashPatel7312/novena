@@ -61,6 +61,7 @@
   font-weight: 700;
   color: #1c2b5a;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .form-subtitle {

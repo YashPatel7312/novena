@@ -1,3 +1,4 @@
+/* ===== Section Wrapper ===== */
 .testimonials-section {
   background-color: #f4f9fd;
   padding: 80px 0;
@@ -25,6 +26,41 @@
   color: #6f8ba4;
 }
 
+/* ===== Swiper Core Styles ===== */
+.testimonials-swiper {
+  width: 100%;
+  display: block;
+}
+
+.testimonials-swiper .swiper-slide {
+  height: auto; /* ✅ Fix for invisible slides */
+}
+
+.testimonials-swiper .swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials-swiper .swiper-pagination-bullet {
+  background: #1c2b5a;
+  opacity: 0.4;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.testimonials-swiper .swiper-pagination-bullet-active {
+  background: #1c2b5a;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* ===== Card ===== */
 .testimonial-card {
   background-color: #fff;
   border-radius: 8px;
@@ -59,6 +95,7 @@
   margin: 0;
   font-weight: 700;
   color: #223a66;
+  overflow: hidden;
 }
 
 .testimonial-header small {
@@ -83,31 +120,7 @@
   opacity: 0.7;
 }
 
-.testimonials-swiper .swiper-pagination {
-  position: relative;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.testimonials-swiper .swiper-pagination-bullet {
-  background: #1c2b5a;
-  opacity: 0.4;
-  width: 10px;
-  height: 10px;
-  margin: 0 6px !important;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.testimonials-swiper .swiper-pagination-bullet-active {
-  background: #1c2b5a;
-  opacity: 1;
-  transform: scale(1.2);
-}
-
-/* Responsive tweaks */
+/* ===== Responsive ===== */
 @media (max-width: 992px) {
   .section-title {
     font-size: 36px;
@@ -127,16 +140,20 @@
   .section-title {
     font-size: 32px;
   }
+
   .testimonial-card {
     padding: 18px;
   }
+
   .testimonial-img {
     width: 45px;
     height: 45px;
   }
+
   .testimonial-header h6 {
     font-size: 0.95rem;
   }
+
   .testimonial-text {
     font-size: 0.85rem;
   }
@@ -146,9 +163,11 @@
   .section-title {
     font-size: 28px;
   }
+
   .testimonial-card {
     margin-bottom: 30px;
   }
+
   .testimonials-swiper .swiper-pagination {
     margin-top: 15px;
   }

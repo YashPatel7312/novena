@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./TestimonialsSection.css";
 
-// image for cards
+// images
 import f1 from "../assets/f1.jpg";
 import f2 from "../assets/f2.jpg";
 import f3 from "../assets/f3.jpg";
@@ -56,32 +56,42 @@ const TestimonialsSection = () => {
   return (
     <section className="testimonials-section py-5">
       <div className="container text-center">
-        <h2 className="section-title fw-bold mb-2">We served over 5000+ Patients</h2>
+        <h2 className="section-title fw-bold mb-2">
+          We served over 5000+ Patients
+        </h2>
         <div className="title-underline mx-auto mb-3"></div>
         <p className="section-subtitle text-muted mb-5">
           Lets know moreel necessitatibus dolor asperiores illum possimus sint
-          voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.
+          voluptates incidunt molestias nostrum laudantium. Maiores porro
+          cumque quaerat.
         </p>
 
+        {/* ✅ Swiper Slider */}
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={30}
           slidesPerView={2}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 4000 }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          loop={true}
           breakpoints={{
             0: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
           }}
+          className="testimonials-swiper"
         >
           {testimonials.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="testimonial-card">
-                <div className="testimonial-header d-flex align-items-center mb-3">
-                  <img src={item.image} alt={item.name} className="testimonial-img me-3" />
+                <div className="testimonial-header">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="testimonial-img"
+                  />
                   <div className="text-start">
-                    <h6 className="fw-bold mb-0">{item.title}</h6>
-                    <small className="text-muted">{item.name}</small>
+                    <h6>{item.title}</h6>
+                    <small>{item.name}</small>
                   </div>
                 </div>
                 <p className="testimonial-text">{item.text}</p>

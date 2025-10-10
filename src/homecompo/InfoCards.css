@@ -29,6 +29,11 @@
 .info-card h4 {
   color: #223a66;
   font-family: exo, sans-serif;
+  
+}
+
+.info-card h6 {
+  overflow: hidden;
 }
 
 .info-card p {

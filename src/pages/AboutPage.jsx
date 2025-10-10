@@ -3,6 +3,8 @@ import PageHero from "../components/PageHero";
 import CareSection from "../aboutcompo/CareSection";
 import ServicesSection from "../aboutcompo/ServicesSection";
 import AchievementsSection from "../aboutcompo/AchievementsSection";
+import SpecialistsSection from "../aboutcompo/SpecialistsSection";
+import TestimonialSection from "../aboutcompo/TestimonialSection";
 
 const AboutPage = () => {
   return (
@@ -11,6 +13,8 @@ const AboutPage = () => {
       <CareSection />
       <ServicesSection />
       <AchievementsSection />
+      <SpecialistsSection />
+      <TestimonialSection />
     </div>
   );
 };

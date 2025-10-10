@@ -68,6 +68,7 @@
   color: #0a2c64;
   margin-bottom: 20px;
   line-height: 1.2;
+  overflow: hidden;
 }
 
 .pc-content p {

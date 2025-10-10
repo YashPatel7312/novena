@@ -2,7 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/autoplay";
+
 import "./PartnersSection.css";
 
 import logo1 from "../assets/logo1.png";
@@ -30,31 +30,37 @@ const PartnersSection = () => {
         <Swiper
           modules={[Autoplay]}
           loop={true}
+          freeMode={true}
           autoplay={{
-            delay: 0,             // no pause between slides
+            delay: 0,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true, // optional
           }}
-          speed={3000}            // smooth continuous speed
-          slidesPerView={4}       // desktop default
+          speed={3000}             // smooth continuous speed
+          slidesPerView={4}        // desktop default
           spaceBetween={40}
           breakpoints={{
             0: {
-              slidesPerView: 2,   // mobile
+              slidesPerView: 2,
               spaceBetween: 20,
             },
             576: {
-              slidesPerView: 3,   // tablet
+              slidesPerView: 3,
               spaceBetween: 30,
             },
             992: {
-              slidesPerView: 4,   // desktop
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1200: {
+              slidesPerView: 6,
               spaceBetween: 40,
             },
           }}
         >
           {partners.map((logo, index) => (
             <SwiperSlide key={index}>
-              <div className="partner-logo" >
+              <div className="partner-logo">
                 <img src={logo} alt={`Partner ${index + 1}`} />
               </div>
             </SwiperSlide>
