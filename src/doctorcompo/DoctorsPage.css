@@ -1,0 +1,146 @@
+/* ===============================
+   Section Title & Intro
+================================= */
+.doctors-section {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #223a66;
+  margin-bottom: 8px;
+  text-align: center !important;
+}
+
+.title-underline {
+  width: 40px;
+  height: 3px;
+  background-color: #e12454;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  color: #6f8ba4;
+  font-size: 16px;
+  max-width: 600px;
+  font-weight: 400;
+  margin: 24px auto 16px auto;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ===============================
+   Filter Menu
+================================= */
+.filter-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.filter-btn {
+  background-color: transparent;
+  border: none;
+  padding: 10px 24px;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  margin: 0 2px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: #e12454;
+  color: #fff;
+}
+
+/* ===============================
+   Doctor Cards
+================================= */
+.doctor-card {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ center content horizontally */
+  text-align: left;
+}
+
+.doctor-image {
+  width: 100%;          /* ✅ make image fluid */
+  height: auto;         /* ✅ keep aspect ratio */
+  max-width: 255px;     /* ✅ limit max size for desktop */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;       /* ✅ center image */
+}
+
+.doctor-info {
+  padding: 10px;
+  width: 100%;
+  max-width: 255px;     /* ✅ match image width */
+}
+
+/* ===============================
+   Doctor Name (Clickable)
+================================= */
+.doctor-name-link {
+  font-size: 21px;
+  font-weight: 600;
+  margin: 5px 0 2px;
+  color: #222222;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.doctor-name-link:hover {
+  color: #e12454; /* 🩷 Pink hover effect */
+}
+
+.doctor-specialty {
+  font-size: 16px;
+  color: #6f8ba4;
+  margin: 0 0 16px 0;
+}
+
+/* ===============================
+   Responsive Layout
+================================= */
+@media (max-width: 991px) {
+  .filter-btn {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  /* ✅ Center grid on mobile */
+  .row {
+    justify-content: center !important;
+  }
+
+  .doctor-card {
+    align-items: center;
+    text-align: left !important;
+  }
+
+  .doctor-info {
+    text-align: center;
+  }
+
+  .doctor-name-link {
+    font-size: 18px;
+  }
+}

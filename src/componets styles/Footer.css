@@ -1,3 +1,6 @@
+/* ============================
+   FOOTER BASE
+============================ */
 .footer {
   background: #f4f9fc;
   padding: 70px 0 30px;
@@ -14,7 +17,9 @@
   padding: 0 20px;
 }
 
-/* === About === */
+/* ============================
+   ABOUT SECTION
+============================ */
 .footer-about .footer-logo {
   width: 150px;
   margin-bottom: 20px;
@@ -49,15 +54,19 @@
   color: #fff;
 }
 
-/* === Headings === */
+/* ============================
+   HEADINGS UNDERLINE (FIXED)
+============================ */
 .footer-links h4,
 .footer-contact h4 {
   color: #000;
   font-weight: 600;
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;      /* 👈 ensure space below heading */
   position: relative;
-  overflow: hidden;
+  display: inline-block;    /* 👈 keep underline tight */
+  margin-bottom: 6px; 
+  padding-bottom: 10px;     /* 👈 ensure underline has space inside */
 }
 
 .footer-links h4::after,
@@ -65,13 +74,17 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: -6px;
+  bottom: 0;               /* 👈 underline sits inside the padding-bottom */
   width: 35px;
   height: 2px;
-  background: #e12454;
+  background: #e12454;     /* 👈 pink underline color */
+  border-radius: 2px;
 }
 
-/* === Links === */
+
+/* ============================
+   LINKS
+============================ */
 .footer-links ul {
   list-style: none;
   padding: 0;
@@ -86,13 +99,16 @@
   color: #6c757d;
   text-decoration: none;
   font-size: 15px;
+  transition: color 0.3s ease;
 }
 
 .footer-links ul li a:hover {
   color: #e12454;
 }
 
-/* === Contact === */
+/* ============================
+   CONTACT SECTION
+============================ */
 .footer-contact p {
   font-size: 15px;
   margin-bottom: 8px;
@@ -104,7 +120,9 @@
   color: #000;
 }
 
-/* === Bottom === */
+/* ============================
+   BOTTOM BAR
+============================ */
 .footer-bottom {
   max-width: 1200px;
   margin: 40px auto 0;
@@ -128,6 +146,9 @@
   font-weight: 600;
 }
 
+/* ============================
+   SUBSCRIBE BOX
+============================ */
 .footer-subscribe {
   display: flex;
   background: #fff;
@@ -159,9 +180,11 @@
   background: #c81f49;
 }
 
-/* ========== RESPONSIVE ========== */
+/* ============================
+   RESPONSIVE
+============================ */
 
-/* Tablet View (2 Columns) */
+/* Tablet View */
 @media (max-width: 992px) {
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
@@ -179,15 +202,12 @@
   }
 }
 
-/* Mobile View (1 Column) */
-/* --- Mobile (≤576px) --- */
-/* --- Mobile (≤576px) --- */
+/* Mobile View */
 @media (max-width: 576px) {
   .footer {
     padding: 40px 0 20px;
   }
 
-  /* 1 Column Layout */
   .footer-container {
     display: flex;
     flex-direction: column;
@@ -204,7 +224,6 @@
   .footer-links h4::after,
   .footer-contact h4::after {
     left: 0;
-    transform: none;
   }
 
   .footer-links ul li a {
@@ -218,7 +237,6 @@
     gap: 6px;
   }
 
-  /* Footer bottom section */
   .footer-bottom {
     display: flex;
     flex-direction: column;
@@ -234,7 +252,6 @@
     margin: 0;
   }
 
-  /* Subscribe box full width */
   .footer-subscribe {
     display: flex;
     background: #fff;
@@ -267,32 +284,5 @@
 
   .footer-subscribe button:hover {
     background: #c81f49;
-  }
-
-  /* Scroll-to-top button - bottom right */
-  #scrollToTopBtn {
-    position: absolute;
-    right: -12px;    /* 👈 button outer corner like screenshot */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 35px;
-    height: 35px;
-    background: #1d366f;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
-  }
-
-  #scrollToTopBtn .arrow {
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 5px;
-    transform: rotate(-135deg);
   }
 }

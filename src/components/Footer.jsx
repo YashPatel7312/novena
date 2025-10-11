@@ -11,7 +11,8 @@ const Footer = () => {
         <div className="footer-about">
           <img src={logo} alt="Logo" className="footer-logo" />
           <p>
-            Tempora dolorem voluptatum nam vero assumenda voluptate, facilis ad eos obcaecati tenetur veritatis eveniet distinctio possimus.
+            Tempora dolorem voluptatum nam vero assumenda voluptate, facilis ad eos obcaecati
+            tenetur veritatis eveniet distinctio possimus.
           </p>
           <div className="footer-social">
             <a href="#"><FaFacebookF /></a>
@@ -49,13 +50,16 @@ const Footer = () => {
           <h4>Get In Touch</h4>
           <p>Support Available for 24/7</p>
           <p><strong>Support@email.com</strong></p>
-          <p> Mon to Fri : 08:30 - 18:00</p>
+          <p>Mon to Fri : 08:30 - 18:00</p>
           <p><strong>+23-456-6588</strong></p>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>Copyright © 2025, Designed & Developed by <span className="theme">Themefisher</span></p>
+        <p>
+          Copyright © 2025, Designed & Developed by{" "}
+          <span className="theme">Themefisher</span>
+        </p>
 
         <div className="footer-subscribe">
           <input type="email" placeholder="Your Email address" />

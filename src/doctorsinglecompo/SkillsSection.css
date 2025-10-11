@@ -1,0 +1,168 @@
+/* ============================
+   SECTION BASE
+============================ */
+.skills-section {
+  background: #fff;
+  padding: 100px 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 0 20px; /* side space on mobile/tablet */
+}
+
+/* ============================
+   COLUMN 1 - MY SKILLS
+============================ */
+.skills-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+
+.title-underline {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #e12454;
+  margin-bottom: 20px;
+}
+
+.skills-text {
+  font-size: 15px;
+  color: #6f8ba6;
+  line-height: 1.7;
+}
+
+/* ============================
+   COLUMN 2 - EXPERTISE AREA
+============================ */
+.expertise-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.expertise-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expertise-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: #223a66;
+  margin-bottom: 10px;
+}
+
+.check-icon {
+  color: #e12454;
+  font-size: 12px;
+}
+
+/* ============================
+   COLUMN 3 - APPOINTMENT BOX
+============================ */
+.appointment-box {
+  background: #f8f9fd;
+  padding: 25px 20px;
+  border-radius: 6px;
+}
+
+.appointment-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+
+.appointment-time p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: #223a66;
+  margin-bottom: 8px;
+}
+
+.urgent-help p {
+  font-size: 14px;
+  color: #6f8ba6;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.urgent-number {
+  font-size: 20px;
+  font-weight: 800;
+  color: #e12454;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.urgent-number:hover {
+  text-decoration: underline;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+/* Tablet */
+@media (max-width: 991px) and (min-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 0 40px;
+  }
+
+  .appointment-box {
+    grid-column: span 2;
+    max-width: 400px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .skills-title,
+  .expertise-title,
+  .appointment-title {
+    text-align: center;
+  }
+
+  .title-underline {
+    margin: 0 auto 20px;
+  }
+
+  .expertise-list li {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .appointment-box {
+    text-align: center;
+  }
+
+  .appointment-time p {
+    justify-content: center;
+    gap: 20px;
+  }
+}

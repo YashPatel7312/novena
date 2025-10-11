@@ -11,14 +11,14 @@ import PartnersSection from "../homecompo/PartnersSection";
 const HomePage = () => {
   return (
     <>
-      {/* <HeroHome />
+      <HeroHome />
       <InfoCards />
       <HomePc />
       <CounterPc />
       <PatientCareSection />
       <AppointmentSection />
       <TestimonialsSection />
-      <PartnersSection /> */}
+      <PartnersSection />
     </>
   );
 };

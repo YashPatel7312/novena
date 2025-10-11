@@ -1,0 +1,113 @@
+/* ============================
+   SECTION BASE
+============================ */
+.education-section {
+  background: #f8f9fd;
+  padding: 100px 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.education-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* for mobile/tablet side spacing */
+}
+
+/* ============================
+   TITLE
+============================ */
+.education-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.title-underline {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #e12454;
+  margin-bottom: 40px;
+}
+
+/* ============================
+   GRID
+============================ */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 60px; /* row gap, column gap */
+}
+
+.education-item {
+  background: transparent;
+}
+
+.education-year {
+  font-size: 16px;
+  font-weight: 600;
+  color: #6c757d;
+  margin-bottom: 8px;
+}
+
+.education-heading {
+  font-size: 21px;
+  font-weight: 800;
+  color: #223a66;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.education-desc {
+  font-size: 16px;
+  color: #6f8ba6;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+/* Tablet */
+@media (max-width: 991px) and (min-width: 768px) {
+  .education-container {
+    padding: 0 40px;
+  }
+
+  .education-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 40px;
+  }
+
+  .education-title {
+    font-size: 26px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .education-container {
+    padding: 0 20px;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr; /* single column */
+    gap: 30px;
+  }
+
+  .education-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .title-underline {
+    margin: 0 auto 30px;
+  }
+
+  .education-item {
+    text-align: center;
+  }
+}

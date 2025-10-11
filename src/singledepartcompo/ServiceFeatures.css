@@ -1,0 +1,75 @@
+.service-features-section {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+}
+
+.service-title {
+    font-weight: 700;
+    font-size: 24px;
+    color: #222222;
+    text-align: left;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.title-underline {
+    width: 30px;
+    height: 3px;
+    background-color: #e12454;
+    margin: 0 0 1.5rem 0;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    text-align: left;
+}
+
+.service-list li {
+    color: #6f8ba4;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    font-weight: 500;
+    align-items: left;
+}
+
+.service-list li::before {
+    content: "✓";
+    color: #e12454;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.appointment-btn {
+    background-color: #e12454;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.appointment-btn:hover {
+    background-color: #1a2552;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+
+    .service-title,
+    .service-list,
+    .appointment-btn {
+        text-align: left;
+    }
+
+    .appointment-btn {
+        width: auto;
+    }
+}

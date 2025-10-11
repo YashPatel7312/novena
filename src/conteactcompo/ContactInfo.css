@@ -1,0 +1,78 @@
+/* ============================
+   SECTION BASE
+============================ */
+.contact-info-section {
+  padding: 60px 20px;
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-info-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ============================
+   CARD STYLING
+============================ */
+.info-card {
+  background: #fff;
+  border: 2px solid #8ba6bd;
+  border-radius: none !important;
+  text-align: center;
+  padding: 50px 25px;
+}
+
+.info-icon {
+  font-size: 40px;
+  color: #e12454;
+  margin: 0 auto 15px auto;
+  display: block;
+}
+
+.info-card h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.info-card p {
+  font-size: 16px;
+  color: #4a6787;
+  margin: 0;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 992px) {
+  .contact-info-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-info-container {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 30px 15px;
+  }
+
+  .info-icon {
+    font-size: 34px;
+  }
+
+  .info-card h4 {
+    font-size: 16px;
+  }
+
+  .info-card p {
+    font-size: 14px;
+  }
+}

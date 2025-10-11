@@ -60,6 +60,7 @@
 /* ========= Content ========= */
 .pc-content {
   flex: 1 1 40%;
+  text-align: left;
 }
 
 .pc-content h1 {

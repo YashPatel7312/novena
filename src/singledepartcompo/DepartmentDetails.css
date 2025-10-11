@@ -1,0 +1,85 @@
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 8px;
+    text-align: left;
+    color: #222222;
+}
+
+.title-underline {
+    width: 40px;
+    height: 3px;
+    background-color: #e12454;
+    margin: 0 0 1rem 0;
+}
+
+.intro-text {
+    color: #6c757d;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    line-height: 30px !important;
+    margin-top: 0 !important;
+    margin-bottom: 16px !important;
+}
+
+.description-text {
+    color: #6c757d;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    line-height: 30px !important;
+    margin-top: 0 !important;
+    margin-bottom: 16px !important;
+
+}
+
+/* Time Schedule Card */
+.time-card {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.time-title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.time-list {
+    list-style: none;
+    padding: 10px 0;
+    margin: 1rem 0;
+}
+
+.time-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 16px;
+}
+
+.time-list li:last-child {
+    border-bottom: none;
+}
+
+.urgent {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.urgent p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.urgent h4 {
+    font-weight: 700;
+    color: #000;
+    margin-top: 0.3rem;
+    overflow: hidden;
+}

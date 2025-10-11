@@ -1,0 +1,110 @@
+/* ============================
+   SECTION BASE
+============================ */
+.comment-section {
+  padding: 80px 20px;
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.comment-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ============================
+   HEADER
+============================ */
+.comment-header h2 {
+  font-size: 66px;
+  font-weight: 700;
+  color: #223a66;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.title-underline {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #e12454;
+  margin: 0 auto 15px;
+}
+
+.comment-header p {
+  font-size: 16px;
+  color: #6f8ba6;
+  max-width: 600px;
+  margin: 0 auto 35px;
+  line-height: 1.6;
+}
+
+/* ============================
+   FORM
+============================ */
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  padding: 12px;
+  background: #f8fafd;
+  border: 1px solid #e1e7ec;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #223a66;
+  outline: none;
+}
+
+.comment-form input::placeholder,
+.comment-form textarea::placeholder {
+  color: #9aa4b5;
+}
+
+/* ============================
+   BUTTON
+============================ */
+.comment-btn {
+  background: #223a66;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.3s ease;
+}
+
+.comment-btn:hover {
+  background: #1a2e50;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .comment-btn {
+    align-self: center;
+  }
+
+  .comment-header h2 {
+    font-size: 22px;
+  }
+}

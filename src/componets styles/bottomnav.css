@@ -5,9 +5,16 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1180px;
-  margin: 0px auto;
-  flex-wrap: wrap; /* allow wrapping on mobile */
-  background-color: #fff; /* navbar background */
+  margin: 0 auto;
+  background-color: #fff;
+  flex-wrap: nowrap; /* ✅ Force single line */
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 /* Brand / Logo text */

@@ -1,0 +1,157 @@
+/* ============================
+   SECTION BASE
+============================ */
+.appointment-section {
+  padding: 100px 0;
+  background: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.appointment-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  padding: 0 20px;
+  align-items: flex-start;
+}
+
+/* ============================
+   LEFT SIDE - Emergency Info
+============================ */
+.appointment-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* 👈 changed from center to flex-start */
+  justify-content: flex-start;
+  text-align: left;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.emergency-icon {
+  font-size: 60px;
+  color: #223a66;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.appointment-left h3 {
+  font-size: 24px;
+  color: #222222;
+  margin-bottom: 8px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.emergency-number {
+  font-size: 44px;
+  font-weight: 800;
+  color: #223a66;
+  text-align: left;
+  margin: 16px 0px 8px;
+}
+
+/* ============================
+   RIGHT SIDE - Form
+============================ */
+.form-title {
+  font-size: 44px;
+  font-weight: 800;
+  color: #223a66;
+  margin-bottom: 8px;
+}
+
+.form-desc {
+  font-size: 16px;
+  color: #6f8ba6;
+  margin-bottom: 24px;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dce1e5;
+  border-radius: 4px;
+  font-size: 14px;
+  background: #f8f9fd;
+  color: #223a66;
+}
+
+.appointment-btn {
+  background: #223a66;
+  color: #fff;
+  padding: 12px 34px;
+  border: none;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.appointment-btn:hover {
+  background: #ff0095f8;
+}
+
+/* ============================
+   THANK YOU SCREEN
+============================ */
+.thankyou-container {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.thankyou-icon {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.thankyou-container h2 {
+  font-size: 44px;
+  font-weight: 800;
+  color: #222;
+  margin: 16px 0 24px;
+  overflow: hidden;
+}
+
+.thankyou-container p {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #6f8ba6;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 991px) {
+  .appointment-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-btn {
+    align-self: center;
+  }
+}

@@ -1,0 +1,223 @@
+/* ============================
+   SECTION BASE
+============================ */
+.doctor-intro-section {
+    padding: 120px 0px 60px 0px !important;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.doctor-intro-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;  /* 👈 default horizontal padding */
+}
+
+/* ============================
+   LEFT SIDE
+============================ */
+.doctor-left {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.doctor-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.doctor-info h3 {
+    font-size: 21px;
+    font-weight: 700;
+    margin-top: 15px;
+    color: #222222;
+    overflow: hidden;
+}
+
+.doctor-specialty {
+    font-size: 16px;
+    color: #6f8ba6;
+    margin-bottom: 16px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-top: 8px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
+    color: #000;
+    border-radius: 50%;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #e12454;
+    color: #fff;
+}
+
+/* ============================
+   RIGHT SIDE
+============================ */
+.doctor-right {
+    flex: 2;
+    min-width: 300px;
+    text-align: left !important;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #000;
+    position: relative;
+    margin-bottom: 16px;
+    text-align: left !important;
+}
+
+.title-underline {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #e12454;
+    margin-top: 6px;
+}
+
+.doctor-right p {
+    color: #6f8ba6;
+    line-height: 1.7;
+    font-size: 16px;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.appointment-btn {
+    background: #e12454;
+    color: #fff;
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+    padding: .75rem 2rem;
+    font-family: "Exo", sans-serif;
+    text-transform: uppercase;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    transition: all .35s ease;
+}
+
+.appointment-btn:hover {
+    background: #1d0c79;
+}
+
+/* ============================
+   RESPONSIVE - TABLET (768px - 991px)
+============================ */
+@media (max-width: 991px) and (min-width: 768px) {
+    .doctor-intro-section {
+        padding: 100px 0 50px;
+    }
+
+    .doctor-intro-container {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 20px;
+        padding: 0 40px; /* 👈 Tablet side spacing */
+    }
+
+    .doctor-left {
+        max-width: 300px;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .doctor-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .doctor-right {
+        flex: 1;
+        text-align: left;
+    }
+
+    .section-title {
+        text-align: left;
+        font-size: 30px;
+    }
+
+    .title-underline {
+        margin-left: 0;
+    }
+}
+
+/* ============================
+   RESPONSIVE - MOBILE (<768px)
+============================ */
+@media (max-width: 767px) {
+    .doctor-intro-section {
+        padding: 80px 0 40px;
+    }
+
+    .doctor-intro-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px; /* 👈 Mobile side spacing */
+    }
+
+    .doctor-left {
+        align-items: center;
+        text-align: center;
+    }
+
+    .doctor-right {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .title-underline {
+        margin: 6px auto 0;
+    }
+
+    .doctor-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .appointment-btn {
+        width: auto;
+        padding: 14px 20px;
+    }
+}
