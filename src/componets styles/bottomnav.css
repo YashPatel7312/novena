@@ -4,6 +4,8 @@
 .custom-navbar {
   padding: 12px 0;
   width: 100%;
+  background-color: #fff;
+  z-index: 1000;
 }
 
 .navbar-container {
@@ -12,48 +14,109 @@
   padding: 0 20px;
 }
 
-/* Logo */
+/* =======================
+   Logo
+======================= */
 .navbar-brand img {
   max-height: 60px;
 }
 
-/* Nav Links */
+/* =======================
+   Nav Links
+======================= */
 .navbar-nav .nav-link {
-  color: #000 !important;
+  color: #000;
   font-weight: 600;
   font-size: 15px;
-  padding: 8px 12px;
-  transition: color 0.3s;
+  padding: 8px 14px;
+  position: relative;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
-.navbar-nav .nav-link:hover,
+/* ✅ Hover color only — no underline */
+.navbar-nav .nav-link:hover {
+  color: #e12454 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* ✅ Active link — text turns red, no underline */
 .navbar-nav .nav-link.active {
   color: #e12454 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
-/* Dropdown */
+/* 🚫 Remove any pseudo underline effects */
+.navbar-nav .nav-link::after,
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  content: none !important;
+}
+
+/* 🚫 Remove Bootstrap dropdown arrow underline behavior */
+.navbar-nav .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+  /* Optional: remove arrow completely */
+  /* display: none !important; */
+}
+
+/* =======================
+   Dropdown Menu
+======================= */
 .dropdown-menu {
   background-color: #fff;
   border-top: 3px solid #e12454;
   border-radius: 0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-top: 0;
+  min-width: 180px;
+  padding: 0;
 }
 
+/* Dropdown items */
 .dropdown-item {
   font-weight: 500;
   color: #000;
   padding: 10px 15px;
+  transition: all 0.3s ease;
 }
 
-.dropdown-item:hover {
+/* ✅ Hover on dropdown item */
+.dropdown-item:hover,
+.dropdown-item:focus {
   background-color: #f8f9fa;
   color: #e12454;
 }
 
-/* Desktop & Tablet - Hover Dropdown */
-@media (min-width: 768px) {
+/* ✅ Active dropdown item */
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #e12454;
+  color: #fff;
+}
+
+/* =======================
+   Desktop: Show dropdown on hover
+======================= */
+@media (min-width: 992px) {
   .navbar .dropdown:hover > .dropdown-menu {
     display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .navbar .dropdown-toggle::after {
@@ -63,13 +126,29 @@
   .navbar .dropdown:hover .dropdown-toggle::after {
     transform: rotate(180deg);
   }
+
+  .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
 }
 
-/* Mobile - Collapse vertical */
-@media (max-width: 767px) {
+/* =======================
+   Mobile
+======================= */
+@media (max-width: 991px) {
   .navbar-nav {
     flex-direction: column !important;
     text-align: center;
     gap: 0 !important;
+  }
+
+  .dropdown-menu {
+    box-shadow: none;
+    border: none;
+    border-top: 1px solid #eee;
   }
 }

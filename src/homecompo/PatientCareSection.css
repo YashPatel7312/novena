@@ -14,7 +14,7 @@
   font-size: 2rem;
   color: #1c2b5a;
   margin-bottom: 10px;
-  text-align: center;
+  text-align: center !important;
 }
 
 .title-underline {
@@ -23,16 +23,10 @@
   background-color: #e91e63;
   border-radius: 10px;
   display: block;
-  margin: 0 auto 16px;
-}
-
-/* If something else overrides alignment (Bootstrap, etc.), 
-   wrap underline with this container or apply directly to parent */
-.container .title-underline {
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .section-subtitle {
