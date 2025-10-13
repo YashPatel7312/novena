@@ -1,12 +1,12 @@
 import React from "react";
 import PageHero from "../components/PageHero";
+import BlogPage from "../blogsidecompo/BlogPage";
 
 const BlogWithSidebar = () => {
   return (
     <div className="page">
       <PageHero title="Blog articles" subtitle="Our blog" />
-      <h1>Blog With Sidebar</h1>
-      <p>This is the blog with sidebar page content.</p>
+      <BlogPage />
     </div>
   );
 };

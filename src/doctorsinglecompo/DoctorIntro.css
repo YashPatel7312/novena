@@ -19,7 +19,7 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 20px;  /* 👈 default horizontal padding */
+    padding: 0 20px;
 }
 
 /* ============================
@@ -88,7 +88,7 @@
 .doctor-right {
     flex: 2;
     min-width: 300px;
-    text-align: left !important;
+    text-align: left !important;  /* ✅ મહત્વપૂર્ણ — આખું કન્ટેન્ટ left */
 }
 
 .section-title {
@@ -96,8 +96,10 @@
     font-weight: 800;
     color: #000;
     position: relative;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     text-align: left !important;
+    display: block;
+    width: 100%;
 }
 
 .title-underline {
@@ -105,9 +107,15 @@
     width: 40px;
     height: 3px;
     background: #e12454;
-    margin-top: 6px;
+    margin-top: 10px;
+    margin-left: 0 !important;     /* ✅ left */
+    margin-right: auto !important; /* ✅ no center */
+    text-align: left;
 }
 
+/* ============================
+   TEXT / BUTTON
+============================ */
 .doctor-right p {
     color: #6f8ba6;
     line-height: 1.7;
@@ -148,7 +156,7 @@
         align-items: flex-start;
         text-align: left;
         gap: 20px;
-        padding: 0 40px; /* 👈 Tablet side spacing */
+        padding: 0 40px;
     }
 
     .doctor-left {
@@ -173,7 +181,8 @@
     }
 
     .title-underline {
-        margin-left: 0;
+        margin-left: 0 !important;
+        margin-right: auto !important;
     }
 }
 
@@ -187,28 +196,30 @@
 
     .doctor-intro-container {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 0 20px; /* 👈 Mobile side spacing */
+        align-items: flex-start; /* ✅ center નહિં, left */
+        text-align: left;
+        padding: 0 20px;
     }
 
     .doctor-left {
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
     }
 
     .doctor-right {
         margin-top: 30px;
-        text-align: center;
+        text-align: left;
     }
 
     .section-title {
-        text-align: center;
+        text-align: left;
         font-size: 24px;
     }
 
     .title-underline {
-        margin: 6px auto 0;
+        margin: 6px 0 0;
+        margin-left: 0 !important;
+        margin-right: auto !important;
     }
 
     .doctor-image img {

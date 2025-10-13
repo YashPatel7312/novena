@@ -1,33 +1,58 @@
 import React from "react";
 import "../homecompo/PatientCareSection.css";
-import 'bootstrap-icons/font/bootstrap-icons.css';
-
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const services = [
-  { icon: "bi bi-beaker", title: "Laboratory services", text: "Saepe nulla praesentium eaque omnis perferendis a doloremque." },
-  { icon: "bi bi-heart-pulse", title: "Heart Disease", text: "Saepe nulla praesentium eaque omnis perferendis a doloremque." },
-  { icon: "bi bi-emoji-smile", title: "Dental Care", text: "Saepe nulla praesentium eaque omnis perferendis a doloremque." },
-  { icon: "bi bi-person-wheelchair", title: "Body Surgery", text: "Saepe nulla praesentium eaque omnis perferendis a doloremque." },
-  { icon: "bi bi-lightbulb", title: "Neurology Sargery", text: "Saepe nulla praesentium eaque omnis perferendis a doloremque." },
-  { icon: "bi bi-diagram-3", title: "Gynecology", text: "Saepe nulla praesentium eaque omnis perferendis a doloremque." },
+  {
+    icon: "bi bi-beaker",
+    title: "Laboratory services",
+    text: "Saepe nulla praesentium eaque omnis perferendis a doloremque."
+  },
+  {
+    icon: "bi bi-heart-pulse",
+    title: "Heart Disease",
+    text: "Saepe nulla praesentium eaque omnis perferendis a doloremque."
+  },
+  {
+    icon: "bi bi-emoji-smile",
+    title: "Dental Care",
+    text: "Saepe nulla praesentium eaque omnis perferendis a doloremque."
+  },
+  {
+    icon: "bi bi-person-wheelchair",
+    title: "Body Surgery",
+    text: "Saepe nulla praesentium eaque omnis perferendis a doloremque."
+  },
+  {
+    icon: "bi bi-lightbulb",
+    title: "Neurology Surgery",
+    text: "Saepe nulla praesentium eaque omnis perferendis a doloremque."
+  },
+  {
+    icon: "bi bi-diagram-3",
+    title: "Gynecology",
+    text: "Saepe nulla praesentium eaque omnis perferendis a doloremque."
+  }
 ];
 
 const PatientCareSection = () => {
   return (
     <section className="patient-care-section py-5">
       <div className="container text-center">
+        {/* Section Title */}
         <h2 className="section-title fw-bold mb-2">Award winning patient care</h2>
-        <div className="title-underline mx-auto mb-3"></div>
+        <div className="title-underline"></div>
         <p className="section-subtitle text-muted mb-5">
-          Lets know moreel necessitatibus dolor asperiores illum possimus sint
+          Let's know moreel necessitatibus dolor asperiores illum possimus sint
           voluptates incidunt molestias nostrum laudantium. Maiores porro cumque
           quaerat.
         </p>
 
+        {/* Services Grid */}
         <div className="row gy-4 gx-4">
           {services.map((service, index) => (
             <div className="col-lg-4 col-md-6" key={index}>
-              <div className="service-card">
+              <div className="service-card h-100">
                 <div className="d-flex align-items-start">
                   <div className="service-icon me-3">
                     <i className={service.icon}></i>

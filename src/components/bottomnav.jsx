@@ -6,23 +6,16 @@ import Logo from "../assets/logo.png";
 import "../componets styles/bottomnav.css";
 
 const BottomNav = () => {
-  const handleNavLinkClick = () => {
-    const navbarCollapse = document.getElementById("mainNavbar");
-    if (navbarCollapse.classList.contains("show")) {
-      const bsCollapse = new window.bootstrap.Collapse(navbarCollapse, { toggle: true });
-      bsCollapse.hide();
-    }
-  };
-
   return (
-    <nav className="navbar navbar-expand-lg">
-      <div className="navbar-inner">
-        {/* Logo */}
+    <div className="container">
+    <nav className="navbar navbar-expand-lg custom-navbar">
+      <div className="container-fluid">
+        {/* ✅ Logo Left Side */}
         <Link className="navbar-brand" to="/">
-          <img src={Logo} width="212" height="60" alt="Logo" />
+          <img src={Logo} alt="Logo" className="nav-logo" />
         </Link>
 
-        {/* Toggle Button */}
+        {/* ✅ Toggle Button - Mobile */}
         <button
           className="navbar-toggler"
           type="button"
@@ -35,99 +28,73 @@ const BottomNav = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Navbar Links */}
-        <div className="collapse navbar-collapse" id="mainNavbar">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+        {/* ✅ Links Right Side */}
+        <div className="collapse navbar-collapse justify-content-end" id="mainNavbar">
+          <ul className="navbar-nav align-items-center flex-row flex-wrap">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/" onClick={handleNavLinkClick}>
-                Home
-              </NavLink>
+              <NavLink className="nav-link" to="/">Home</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/about">About</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/services">Services</NavLink>
             </li>
 
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/about" onClick={handleNavLinkClick}>
-                About
-              </NavLink>
-            </li>
-
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/services" onClick={handleNavLinkClick}>
-                Services
-              </NavLink>
-            </li>
-
-            {/* Department Dropdown */}
+            {/* Department */}
             <li className="nav-item dropdown">
-              <NavLink className="nav-link dropdown-toggle" to="#" data-bs-toggle="dropdown">
+              <NavLink
+                className="nav-link dropdown-toggle"
+                to="#"
+                data-bs-toggle="dropdown"
+              >
                 Department
               </NavLink>
               <ul className="dropdown-menu">
-                <li>
-                  <NavLink className="dropdown-item" to="/department" onClick={handleNavLinkClick}>
-                    Department
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className="dropdown-item" to="/department-single" onClick={handleNavLinkClick}>
-                    Department Single
-                  </NavLink>
-                </li>
+                <li><NavLink className="dropdown-item" to="/department">Department</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/department-single">Department Single</NavLink></li>
               </ul>
             </li>
 
-            {/* Doctors Dropdown */}
+            {/* Doctors */}
             <li className="nav-item dropdown">
-              <NavLink className="nav-link dropdown-toggle" to="#" data-bs-toggle="dropdown">
+              <NavLink
+                className="nav-link dropdown-toggle"
+                to="#"
+                data-bs-toggle="dropdown"
+              >
                 Doctors
               </NavLink>
               <ul className="dropdown-menu">
-                <li>
-                  <NavLink className="dropdown-item" to="/doctors" onClick={handleNavLinkClick}>
-                    Doctors
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className="dropdown-item" to="/doctor-single" onClick={handleNavLinkClick}>
-                    Doctors Single
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className="dropdown-item" to="/appointment" onClick={handleNavLinkClick}>
-                    Appointment
-                  </NavLink>
-                </li>
+                <li><NavLink className="dropdown-item" to="/doctors">Doctors</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/doctor-single">Doctors Single</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/appointment">Appointment</NavLink></li>
               </ul>
             </li>
 
-            {/* Blog Dropdown */}
+            {/* Blog */}
             <li className="nav-item dropdown">
-              <NavLink className="nav-link dropdown-toggle" to="#" data-bs-toggle="dropdown">
+              <NavLink
+                className="nav-link dropdown-toggle"
+                to="#"
+                data-bs-toggle="dropdown"
+              >
                 Blog
               </NavLink>
               <ul className="dropdown-menu">
-                <li>
-                  <NavLink className="dropdown-item" to="/blog-with-sidebar" onClick={handleNavLinkClick}>
-                    Blog With Sidebar
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className="dropdown-item" to="/blog-single" onClick={handleNavLinkClick}>
-                    Blog Single
-                  </NavLink>
-                </li>
+                <li><NavLink className="dropdown-item" to="/blog-with-sidebar">Blog With Sidebar</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/blog-single">Blog Single</NavLink></li>
               </ul>
             </li>
 
-            {/* Contact */}
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contact" onClick={handleNavLinkClick}>
-                Contact
-              </NavLink>
+              <NavLink className="nav-link" to="/contact">Contact</NavLink>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    </div>
   );
 };
 

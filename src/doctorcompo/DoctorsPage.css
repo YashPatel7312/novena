@@ -3,6 +3,7 @@
 ================================= */
 .doctors-section {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center !important;
 }
 
 .section-title {
@@ -10,6 +11,12 @@
   font-weight: 700;
   color: #223a66;
   margin-bottom: 8px;
+  display: block;
+  width: 100%;
+  text-align: center !important;
+}
+
+.text-center .section-title {
   text-align: center !important;
 }
 

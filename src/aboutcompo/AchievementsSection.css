@@ -95,9 +95,9 @@
   }
 
   .achievement-logo {
-    width: 100%;         /* ✅ Full width on tablet */
-    max-width: none;     /* ✅ Remove the 276px cap */
-    height: 120px;       /* Optional: give it more height */
+    width: 100%;         
+    max-width: none;     
+    height: 120px;       
   }
 }
 
@@ -116,9 +116,9 @@
   }
 
   .achievement-logo {
-    width: 100%;        /* ✅ Full width on mobile */
+    width: 100%;        
     max-width: none;
-    height: 130px;      /* ✅ Taller for bigger logo display */
+    height: 130px;      
     padding: 15px;
   }
 }
